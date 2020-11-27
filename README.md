@@ -1,2 +1,3 @@
 # ProjectEulerC
- Solutions for projecteuler.net problems in C
+ 
+Solutions for [projecteuler.net](projecteuler.net) problems written in C
