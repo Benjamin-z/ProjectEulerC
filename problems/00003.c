@@ -15,8 +15,8 @@ int main(){
     unsigned long prime_factor;
     
     for(i=3; i<(int)sqrt((float)NB); i++){
-        if(is_prime(i)){
-            if(NB%i == 0){
+        if(NB%i == 0){
+            if(is_prime(i)){
                 prime_factor = i;
             }
         }
