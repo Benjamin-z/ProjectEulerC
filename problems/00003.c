@@ -8,7 +8,7 @@ What is the largest prime factor of the number 600851475143 ?
 
 #define NB 600851475143
 
-unsigned int is_prime(unsigned long nb);
+int is_prime(unsigned long nb);
 
 int main(){
     unsigned long i;
@@ -25,7 +25,7 @@ int main(){
     return 0;
 }
 
-unsigned int is_prime(unsigned long nb){
+int is_prime(unsigned long nb){
     unsigned int i = 2;
 
     while((nb%i != 0) && (i<(int)sqrt((float)nb))) i++;

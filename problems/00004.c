@@ -9,12 +9,12 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 #define TEST 9009
 
 // return the lenght on an int
-int lenght_int(unsigned int nb);
+int lenght_int(int nb);
 
 // test if a number is a palindrome
 // 1 if true
 // 0 if false
-int is_palindrome(unsigned int nb);
+int is_palindrome(int nb);
 
 int main(){
     printf("%u\n", is_palindrome(TEST));
@@ -22,7 +22,7 @@ int main(){
 }
 
 // Thx https://stackoverflow.com/a/3069580
-int length_int(unsigned int nb){
+int length_int(int nb){
     // max is 6 digit (999*999 = 998001)
     if (nb >= 100000) return 6;
     if (nb >= 10000) return 5;
@@ -32,12 +32,12 @@ int length_int(unsigned int nb){
     return 1;
 }
 
-int is_palindrome(unsigned int nb){
-    unsigned char nb_digits = length_int(nb);
+int is_palindrome(int nb){
+    int nb_digits = length_int(nb);
     char str[nb_digits];
-    unsigned char i = 0;
+    int i = 0;
 
-    sprintf(str, "%u", nb);
+    sprintf(str, "%i", nb);
     while(str[i] == str[nb_digits-i-1] && i<nb_digits/2) i++;
 
     return i == nb_digits/2;
